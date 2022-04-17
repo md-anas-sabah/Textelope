@@ -66,7 +66,10 @@ function Chats() {
   return (
     <div className="chats-page">
       <div className="nav-bar">
-        <div className="logo-tab">Textelope</div>
+        <div className="logo-tab">
+          <img src="appLogo.jpg" alt="" className="img-logo"></img>
+          <span>Textelope</span>
+        </div>
         <div onClick={handleLogout} className="logout-tab">
           Logout
         </div>
@@ -74,11 +77,12 @@ function Chats() {
 
       <ChatEngine
         height="calc(100vh - 66px)"
-        projectID = {process.env.REACT_APP_CHAT_ENGINE_ID}
+        projectID={process.env.REACT_APP_CHAT_ENGINE_ID}
         userName={user.email}
         userSecret={user.uid}
       />
     </div>
+   
   );
 }
 
